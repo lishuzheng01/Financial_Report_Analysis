@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(del \"d:\\\\Files\\\\Code\\\\Financial_Report_Analysis\\\\src\\\\doc_maker_slef_planning_write_long_article.py\")"
+    ]
+  }
+}
