@@ -51,5 +51,5 @@ def finall_report_envirment_maker(code,number):
     code, file_paths = get_all_files_recursive(code)
     for source_file in file_paths:
         report_envirment_maker(code, source_file)
-        report_data_maker(code,number)
+    report_data_maker(code,number)
 

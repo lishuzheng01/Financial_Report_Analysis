@@ -1,33 +1,6 @@
-# Core dependencies
-akshare>=1.18.4
-pandas>=2.3.3
-numpy>=2.4.0
-requests>=2.32.5
-
-# Data processing
-openpyxl>=3.1.5
-xlrd>=2.0.2
-python-dateutil>=2.9.0
-
-# Web scraping and parsing
-beautifulsoup4>=4.14.3
-lxml>=6.0.2
-html5lib>=1.1
-aiohttp>=3.13.2
-curl_cffi>=0.13.0
-
-# Translation
-deep-translator>=1.11.4
-
-# Document generation
-python-docx>=1.2.0
-
-# OpenAI API
-openai>=1.0.0
-
-# Visualization
-matplotlib>=3.10.8
-
-# Utilities
-tqdm>=4.67.1
-colorama>=0.4.6
+akshare
+pandas
+numpy
+matplotlib
+openai
+pyyaml
