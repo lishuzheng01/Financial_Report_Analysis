@@ -1,8 +1,10 @@
+
 from src.report_data_downloader import get_stock_financial_data
 from src.report_data_reader import report_data_reader
 from src.report_data_descriptive_statistics_for_balance import report_data_descriptive_statistics_for_balance
 from src.report_data_descriptive_statistics_for_cash_flow import report_data_descriptive_statistics_for_cash_flow
 from src.report_data_descriptive_statistics_for_profit import report_data_descriptive_statistics_for_profit
+from src.report_data_ratio_analysis import report_data_ratio_analysis
 from src.report_envirment_maker import finall_report_envirment_maker
 from src.doc_maker_get_all_information_prompt import get_all_information_prompt
 from src.doc_maker_write_article import doc_maker_write_article
@@ -11,15 +13,14 @@ symbol = "600001"
 number=12
 
 # 如需重新拉取财报原始数据，取消下一行注释
-# get_stock_financial_data(symbol)
+get_stock_financial_data(symbol)
 # 生成三大报表的描述性统计结果
 report_data_descriptive_statistics_for_balance(symbol,number)
 report_data_descriptive_statistics_for_cash_flow(symbol,number)
 report_data_descriptive_statistics_for_profit(symbol,number)
+report_data_ratio_analysis(symbol,number)
 # 准备最终报告所需的环境与数据文件
 finall_report_envirment_maker(symbol,number)
 # 汇总提示词并生成报告正文
 finall_all_prompt = get_all_information_prompt(symbol)
 # doc_maker_write_article(finall_all_prompt)
-
-
