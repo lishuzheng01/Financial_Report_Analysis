@@ -10,7 +10,7 @@ from src.report_data_dupont_analysis import dupont_analysis
 from src.report_envirment_maker import finall_report_envirment_maker
 from src.doc_maker_get_all_information_prompt import get_all_information_prompt
 from src.doc_maker_write_article import doc_maker_write_article
-
+from src.report_data_struct_anomaly import struct_anomaly_analysis
 # 股票代码与取样行数（财报期数）
 symbol = "600001"
 number=12
@@ -24,8 +24,9 @@ report_data_descriptive_statistics_for_profit(symbol,number)
 report_data_ratio_analysis(symbol,number)
 cashflow_quality_analysis(symbol,number)
 dupont_analysis(symbol,number)
+struct_anomaly_analysis(symbol, number)
 # 准备最终报告所需的环境与数据文件
 finall_report_envirment_maker(symbol,number)
 # 汇总提示词并生成报告正文
 finall_all_prompt = get_all_information_prompt(symbol)
-# doc_maker_write_article(finall_all_prompt)
+doc_maker_write_article(finall_all_prompt)

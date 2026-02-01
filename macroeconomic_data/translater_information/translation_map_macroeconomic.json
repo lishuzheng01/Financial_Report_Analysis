@@ -1,0 +1,16 @@
+{
+  "field_translate_map": {
+    "商品": "indicator",
+    "日期": "date",
+    "今值": "current_value",
+    "预测值": "forecast_value",
+    "前值": "previous_value"
+  },
+  "indicator_translate_map": {
+    "中国CPI月率报告": "CN_CPI_MOM",
+    "中国财新制造业PMI终值报告": "CN_PMI_CAIXIN_FINAL",
+    "中国以美元计算出口年率报告": "CN_EXPORT_USD_YOY",
+    "中国GDP年率报告": "CN_GDP_YOY",
+    "中国PPI年率报告": "CN_PPI_YOY"
+  }
+}
