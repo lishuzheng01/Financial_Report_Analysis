@@ -9,7 +9,7 @@ llm:
   writer:
     model: "doubao-seed-1-6-flash-250828"
     api_base: "https://ark.cn-beijing.volces.com/api/v3"
-    api_key: "a8509ac0-ea82-4d50-b284-8f826988677d"
+    api_key: "ffb0a182-f990-4990-9f78-8862e07fe081"
     temperature: 0.7
     max_tokens: 8000
     timeout: 180

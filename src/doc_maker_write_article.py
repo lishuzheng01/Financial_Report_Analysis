@@ -87,9 +87,12 @@ def doc_maker_write_article(
         article = response.choices[0].message.content
         logger.info(f"文章生成成功：{len(article)}字")
 
-        if save_to_file and code:
-            filepath = save_article_to_file(article, code)
-            logger.info(f"文章已保存至: {filepath}")
+        if save_to_file:
+            if code:
+                filepath = save_article_to_file(article, code)
+                logger.info(f"文章已保存至: {filepath}")
+            else:
+                logger.warning("未提供 code，已跳过保存文件。")
 
         return article
 

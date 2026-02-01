@@ -21,7 +21,7 @@ class LLMConfig:
     # Writer model settings
     writer_model: str = "doubao-seed-1-6-lite-251015"
     writer_api_base: str = "https://ark.cn-beijing.volces.com/api/v3"
-    writer_api_key: str = "a8509ac0-ea82-4d50-b284-8f826988677d"
+    writer_api_key: str = "ffb0a182-f990-4990-9f78-8862e07fe081"
     writer_temperature: float = 0.7
     writer_max_tokens: int = 8000
     writer_timeout: int = 180
