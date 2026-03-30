@@ -231,8 +231,9 @@ def plot_growth_trends(ratios, code, output_dir):
     colors = ['#2E86AB', '#E63946', '#F18F01', '#06A77D']
 
     for idx, (ax, metric, color) in enumerate(zip(axes.flat, metrics, colors)):
-        data = ratios[metric].dropna()
-        dates = ratios['Report Date'][ratios[metric].notna()]
+        mask = ratios[metric].notna()
+        data = ratios[metric][mask].values
+        dates = ratios['Report Date'][mask].values
         ax.bar(dates, data, color=color, alpha=0.7, label=metric)
         ax.axhline(y=0, color='black', linestyle='--', linewidth=1)
         ax.set_title(metric, fontsize=12, fontweight='bold')
