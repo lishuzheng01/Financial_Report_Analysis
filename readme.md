@@ -4,6 +4,41 @@
 
 ## 项目概览
 
+graph TD
+    subgraph "新增文件"
+        A["CLAUDE.md<br/><small>项目指引文档</small>"]:::newFile
+        B["requirements.txt<br/><small>依赖声明</small>"]:::newFile
+    end
+
+    subgraph "删除文件"
+        C["app.py<br/><small>Streamlit 演示</small>"]:::delFile
+    end
+
+    subgraph "full_work_flow_of_describle_statiscs.py"
+        D["get_stock_financial_data()"]:::activated
+        E["report_data_descriptive_statistics_for_balance()"]:::activated
+        F["report_data_descriptive_statistics_for_cash_flow()"]:::activated
+        G["report_data_descriptive_statistics_for_profit()"]:::activated
+        H["report_data_ratio_analysis()"]:::activated
+        I["cashflow_quality_analysis()"]:::activated
+        J["dupont_analysis()"]:::activated
+        K["struct_anomaly_analysis()"]:::activated
+        L["finall_report_envirment_maker()"]:::existing
+        M["get_all_information_prompt()"]:::existing
+    end
+
+    subgraph "src/report_data_descriptive_statistics_for_profit.py"
+        N["plot_growth_trends()"]:::bugfix
+    end
+
+    D --> E --> F --> G --> H --> I --> J --> K --> L --> M
+
+    classDef newFile fill:#c8e6c9,color:#1a5e20,stroke:#388e3c
+    classDef delFile fill:#ffcdd2,color:#b71c1c,stroke:#d32f2f
+    classDef activated fill:#bbdefb,color:#0d47a1,stroke:#1976d2
+    classDef existing fill:#e0e0e0,color:#333,stroke:#9e9e9e
+    classDef bugfix fill:#fff3e0,color:#e65100,stroke:#f57c00
+
 - 一键抓取：使用 AkShare 从新浪财经接口下载资产负债表、利润表、现金流量表（支持多期）。
 - 描述性分析：资产结构、负债结构、资本结构、利润率、费用率、收入质量、增长趋势、现金流结构等可视化。
 - LLM 报告：根据财务与宏观数据拼装提示词，调用 OpenAI API 生成完整分析文章。
