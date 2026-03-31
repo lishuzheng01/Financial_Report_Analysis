@@ -14,8 +14,8 @@ from src.report_data_struct_anomaly import struct_anomaly_analysis
 import os
 
 # 股票代码与取样行数（财报期数）
-symbol = "600001"
-number=12
+symbol = "600519"
+number=40
 
 # 如需重新拉取财报原始数据，取消下一行注释
 get_stock_financial_data(symbol)
@@ -33,7 +33,7 @@ finall_report_envirment_maker(symbol,number)
 finall_all_prompt = get_all_information_prompt(symbol)
 print(finall_all_prompt)
 # 先创建markdown文件，将finall_all_prompt的全部内容写入报告中，文件路径为finall_stock_report\{symbol}\{symbol}_final_report.md
-# os.makedirs(f"finall_stock_report/{symbol}", exist_ok=True)
-# with open(f"finall_stock_report/{symbol}/{symbol}_final_report.md", "w", encoding="utf-8") as f:    
-#     f.write(finall_all_prompt)
+os.makedirs(f"finall_stock_report/{symbol}", exist_ok=True)
+with open(f"finall_stock_report/{symbol}/{symbol}_final_report.md", "w", encoding="utf-8") as f:    
+    f.write(finall_all_prompt)
 # doc_maker_write_article(finall_all_prompt, code=symbol, save_to_file=True)

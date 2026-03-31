@@ -50,6 +50,7 @@ env/
 *.db
 *.sqlite
 *.sqlite3
+*.md
 
 # Output files
 *.png
@@ -58,6 +59,7 @@ env/
 *.pdf
 *.xlsx
 *.xls
+*.csv
 
 # OS
 .DS_Store

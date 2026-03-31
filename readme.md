@@ -4,6 +4,7 @@
 
 ## 项目概览
 
+~~~
 graph TD
     subgraph "新增文件"
         A["CLAUDE.md<br/><small>项目指引文档</small>"]:::newFile
@@ -38,6 +39,7 @@ graph TD
     classDef activated fill:#bbdefb,color:#0d47a1,stroke:#1976d2
     classDef existing fill:#e0e0e0,color:#333,stroke:#9e9e9e
     classDef bugfix fill:#fff3e0,color:#e65100,stroke:#f57c00
+~~~
 
 - 一键抓取：使用 AkShare 从新浪财经接口下载资产负债表、利润表、现金流量表（支持多期）。
 - 描述性分析：资产结构、负债结构、资本结构、利润率、费用率、收入质量、增长趋势、现金流结构等可视化。
